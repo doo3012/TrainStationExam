@@ -3,25 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #f6f3ee;
+  --foreground: #20201d;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .field-input {
+    @apply h-11 w-full border border-[#c9bfaf] bg-white px-3 text-sm text-[#20201d] outline-none transition placeholder:text-[#9b9284] focus:border-[#7d2d1f] focus:ring-2 focus:ring-[#7d2d1f]/15;
+  }
+
+  .btn-primary {
+    @apply inline-flex h-11 items-center justify-center border border-[#20201d] bg-[#20201d] px-4 text-sm font-semibold text-white transition hover:bg-[#3a3832] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex h-11 items-center justify-center border border-[#c9bfaf] bg-[#fffaf2] px-4 text-sm font-semibold text-[#20201d] transition hover:bg-[#eee6d8];
+  }
+
+  .btn-table {
+    @apply border border-[#c9bfaf] bg-[#fffaf2] px-3 py-1.5 text-xs font-semibold text-[#20201d] transition hover:bg-[#eee6d8];
+  }
+
+  .btn-table-danger {
+    @apply border border-[#d99b8a] bg-[#fff1ed] px-3 py-1.5 text-xs font-semibold text-[#8f2c19] transition hover:bg-[#f9dfd8] disabled:cursor-not-allowed disabled:opacity-60;
   }
 }
