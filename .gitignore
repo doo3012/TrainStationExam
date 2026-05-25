@@ -1,0 +1,67 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# .NET build output
+**/bin/
+**/obj/
+**/TestResults/
+**/artifacts/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+*.nupkg
+*.snupkg
+
+# ASP.NET local development
+appsettings.Local.json
+appsettings.*.local.json
+
+# Node, Bun, and Next.js
+**/node_modules/
+**/.pnp/
+**/.pnp.js
+**/.yarn/install-state.gz
+**/.next/
+**/out/
+**/build/
+**/coverage/
+**/.vercel/
+**/*.tsbuildinfo
+**/next-env.d.ts
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+
+# Docker and database local data
+docker-data/
+data/
+*.bak
+*.bacpac
+*.mdf
+*.ldf
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+temp/
