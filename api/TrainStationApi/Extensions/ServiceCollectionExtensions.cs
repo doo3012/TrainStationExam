@@ -1,5 +1,10 @@
 using TrainStationApi.Database;
+using TrainStationApi.Features.TrainSchedules.CreateTrainSchedule;
+using TrainStationApi.Features.TrainSchedules.DeleteTrainSchedule;
+using TrainStationApi.Features.TrainSchedules.GetTrainScheduleById;
+using TrainStationApi.Features.TrainSchedules.GetTrainSchedules;
 using TrainStationApi.Features.TrainSchedules.SearchTrainSchedules;
+using TrainStationApi.Features.TrainSchedules.UpdateTrainSchedule;
 using FluentValidation;
 
 namespace TrainStationApi.Extensions;
@@ -10,7 +15,12 @@ public static class ServiceCollectionExtensions
     {
         services.AddSingleton<IDbConnectionFactory, DbConnectionFactory>();
 
+        services.AddScoped<CreateTrainScheduleHandler>();
+        services.AddScoped<DeleteTrainScheduleHandler>();
+        services.AddScoped<GetTrainScheduleByIdHandler>();
+        services.AddScoped<GetTrainSchedulesHandler>();
         services.AddScoped<SearchTrainSchedulesHandler>();
+        services.AddScoped<UpdateTrainScheduleHandler>();
 
         services.AddValidatorsFromAssembly(typeof(ServiceCollectionExtensions).Assembly);
 
